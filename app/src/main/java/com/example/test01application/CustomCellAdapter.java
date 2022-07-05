@@ -58,6 +58,9 @@ public class CustomCellAdapter extends RecyclerView.Adapter<CellViewHolder> {
     public void onBindViewHolder(@NonNull CellViewHolder holder, int position) {
         // item을 하나하나 보여주는(=bind) 함수
         holder.tv_view1.setText(cellList.get(position).getCell());
+        holder.tv_view2.setText(cellList.get(position).getDetail());
+        holder.tv_view3.setText(String.valueOf(cellList.get(position).getTotal_time())+" 분");
+        holder.itemView.setId(cellList.get(position).getImgId());
     }
 
     // 아이템이 몇개인지 세서 뿌려줌.

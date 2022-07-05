@@ -88,30 +88,30 @@ public class DaygridActivity extends AppCompatActivity {
         listResId.add(R.drawable.ic_launcher_background);
 
 
-        gridnote.child("notes").child("1").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-
-                for (DataSnapshot snap : snapshot.getChildren()) {
-
-                    GridNote gridNote1 = snap.getValue(GridNote.class);
-                    String cell_category = gridNote1.getCategory(); // 카테고리
-                    String cell_detail = gridNote1.getMemo(); // 상세 설명
-                    Integer cell_time = (int) gridNote1.getTotal_time(); // 총 시간
-
-                    cellcategory.add(cell_category);
-                    celldetail.add(cell_detail);
-                    celltime.add(cell_time);
-
-                }
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(getApplicationContext(), "데이터가 없습니다.", Toast.LENGTH_SHORT).show();
-            }
-        });
+//        gridnote.child("notes").child("1").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//
+//                for (DataSnapshot snap : snapshot.getChildren()) {
+//
+//                    GridNote gridNote1 = snap.getValue(GridNote.class);
+//                    String cell_category = gridNote1.getCategory(); // 카테고리
+//                    String cell_detail = gridNote1.getMemo(); // 상세 설명
+//                    Integer cell_time = (int) gridNote1.getTotal_time(); // 총 시간
+//
+//                    cellcategory.add(cell_category);
+//                    celldetail.add(cell_detail);
+//                    celltime.add(cell_time);
+//
+//                }
+//
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//                Toast.makeText(getApplicationContext(), "데이터가 없습니다.", Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
 
         // 할 일
