@@ -13,6 +13,10 @@ public class GridNote {
     private int total_time;
     private String memo;
 
+    public GridNote(){
+
+    }
+
     public GridNote(String category, int start_hour, int start_min, int end_hour, int end_min, int total_time, String memo) {
 
         this.category = category;
