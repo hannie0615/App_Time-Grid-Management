@@ -34,7 +34,6 @@ public class RegisterActivity extends AppCompatActivity {
     RadioGroup radio_group;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
